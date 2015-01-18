@@ -1,0 +1,393 @@
+/*
+Theme Name: Moesia Child by Maciej Sularz
+Theme URI: http://athemes.com/theme/moesia
+Author: Sularz Maciej
+Author URI: http://msdesign.me
+Template: moesia
+Description: This is a child theme of the Moesia theme, It adds a new widget that preserves the behaviour of original Moesia theme widgets. A native Bootstrap 3 Nav-Bar has also been incorporated in this theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: moesia
+Domain Path: /languages/
+Tags: light, two-columns, three-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Moesia is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Welcome area
+--------------------------------------------------------------*/
+.welcome-logo {
+	width: 100%;
+	max-width: 400px;
+}
+
+/*--------------------------------------------------------------
+Nav-Bar
+--------------------------------------------------------------*/
+.navbar-custom .site-branding {
+	float: left;
+	padding: 40px 15px;
+}
+
+.navbar-custom .site-logo {
+	max-width: 250px;
+	position: relative;
+	top: 50%;
+}
+
+/* navbar */
+.navbar-custom {
+    border: none;
+    border-radius: 0;
+    background-color: #222;
+}
+/* title */
+.navbar-custom .navbar-brand {
+    color: #777;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #5E5E5E;
+}
+.navbar-custom .navbar-nav {
+    padding-top: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* link */
+.navbar-custom .navbar-nav > li > a {
+    /*color: #777;*/
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    /*color: #333;*/
+    background: none;
+}
+.navbar-custom .navbar-nav > .active > a, 
+.navbar-custom .navbar-nav > .active > a:hover, 
+.navbar-custom .navbar-nav > .active > a:focus {
+    /*color: #555;*/
+    background-color: transparent;
+}
+.navbar-custom .navbar-nav > .open > a, 
+.navbar-custom .navbar-nav > .open > a:hover, 
+.navbar-custom .navbar-nav > .open > a:focus {
+    /*color: #555;*/
+    background-color: transparent;
+}
+/* caret */
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-custom .navbar-nav > .open > a .caret, 
+.navbar-custom .navbar-nav > .open > a:hover .caret, 
+.navbar-custom .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-custom .navbar-toggle {
+	margin-top: 45px;
+    /*border-color: #DDD;*/
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    /*background-color: #222;*/
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    /*background-color: #CCC;*/
+}
+@media (max-width: 767px) {
+	.navbar-custom .navbar-nav {
+	    padding-top: 0px;
+	}
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+	.is-sticky {
+		top: 0;
+		width: 100%;
+		z-index: 99999;
+		background-color: #fff;
+	}
+	.is-sticky .navbar-custom .navbar-nav {
+		padding: 20px 10px;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;			
+	}
+	.is-sticky .navbar-custom .navbar-nav ul ul li {
+		padding: 5px;
+	}
+	.is-sticky .site-branding {
+		padding: 20px 15px;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;		
+	}
+	.admin-bar .is-sticky .top-bar {
+		margin-top: 32px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+Responsive
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1025px) {	
+	.header-image {
+		display: none;
+	}
+}
+@media only screen and (max-width: 1199px) {
+	.content-area {
+		width: 550px;
+	}	
+	.fullwidth {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.welcome-info {
+		top: 30px;
+	}
+	.project:nth-of-type(2n+1),
+	.service:nth-of-type(2n+1),
+	.employee:nth-of-type(2n+1) {
+		clear: both;
+	}
+	.blog-post:nth-of-type(3) {
+		clear: both;
+		margin-top: 30px;
+	}
+	.project:nth-of-type(3n+1),
+	.service:nth-of-type(3n+1),
+	.employee:nth-of-type(3n+1) {
+		clear: none;
+	}
+	.content-area,
+	.widget-area {
+		width: 100%;
+	}
+	.stuck {
+		position: relative;
+	}	
+}
+@media only screen and (max-width: 767px) {
+	.blog-post:nth-of-type(3) {
+		clear: both;
+	}
+	.skills-desc {
+		border: 0;
+		margin-bottom: 30px;
+	}
+	.skills-list {
+		border: 0;
+		margin: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.hentry .entry-thumb,
+	.post-content {
+		width: 100%;
+		padding: 0;
+	}
+	.entry-title {
+		font-size: 25px;
+	}
+	.welcome-desc,
+	.welcome-button {
+		display: none;
+	}
+	.panel-grid-cell section,   
+	.panel.widget {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.service,
+	.employee {
+		padding-left: 0;
+		padding-right: 0;
+	}		
+}
+@media only screen and (max-width: 499px) {
+	.project,
+	.service,
+	.employee,
+	.bq-text,
+	.bq-img {
+		width: 100%;		
+	}
+	.project img {
+		display: block;
+		margin: 0 auto;
+	}
+	section .widget-title {
+		font-size: 36px;
+	}
+	.welcome-title {
+		font-size: 24px;
+	}
+	.welcome-logo {
+		max-width: 100px;
+	}
+	.welcome-desc {
+		font-size: 20px;
+		color: #D8D8D8;
+		text-shadow: 0 0 2px #222, 0 0 2px #222;
+	}
+	.welcome-button {
+	    font-size: 14px;
+	    margin-top: 30px;
+	}
+	.blog-post {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.blog-post:nth-of-type(3) {
+		margin-top: 0;
+	}
+	table {
+		table-layout: fixed;
+	}
+	.comments-area .children {
+		padding-left: 0;
+	}
+    .navbar-custom .site-logo {
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 416px) {
+	.social-area li {
+		padding: 0 10px;	
+	}
+	.social-area a:before {
+		font-size: 65px;
+	}
+	.page-template-page_services-php .service,
+	.page-template-page_testimonials-php .testimonial {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+/* Small menu */
+.menu-toggle {
+	display: none;
+	background-color: #ebebeb;
+	color: #444;
+	margin: 40px 0;
+}
+@media screen and (max-width: 991px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+	.main-navigation.toggled {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.main-navigation ul {
+		float: none;
+	}
+	.toggled .menu-toggle {
+		margin: 0;
+	}
+	.main-navigation li {
+		width: 100%;
+		border: 0;
+		padding: 5px 0;
+		text-align: center;
+	}
+	.main-navigation li:first-child {
+		padding-top: 15px;
+	}
+	.main-navigation ul ul li:hover {
+		background-color: transparent;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+	.main-navigation .children,
+	.main-navigation ul ul {
+		display: block !important;
+		float: none;
+		position: static;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+	}
+	.main-navigation ul ul li {
+		border: 0;
+		text-align: center;
+	}
+	.main-navigation ul ul a {
+		color: #E2E2E2;
+		margin: 0 auto;
+	}
+	.top-bar {
+		position: relative !important;
+	}	
+}
+@media screen and (max-width: 320px) {
+	.menu-toggle {
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.has-banner:after,
+	section {
+		background-attachment: scroll !important;
+		background-position: center top !important;
+		-webkit-background-size: auto !important;
+		-moz-background-size: auto !important;
+		background-size: auto !important;
+	}
+	.widget-title:after {
+		display: none;
+	}
+}
+
+/* Multi columns support */
+.container {
+  width: auto !important;	
+}
+.widget .container,
+section .container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
